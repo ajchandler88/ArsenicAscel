@@ -100,6 +100,7 @@ nav a:hover {
     color:dimgray;
     display: flex;
     align-items: center;
+    display:none;
 }
 
 .mobile_nav_btn {
@@ -169,6 +170,10 @@ nav a:hover {
     .navbar .navbar_links a:nth-child(1),
     .navbar .navbar_links a:nth-child(2) {
         display: none;
+    }
+
+    .mobile_nav {
+        display:flex;
     }
 
     .mobile_nav_btn {
@@ -261,19 +266,20 @@ body {
 .main_product {    
     justify-content: center;
     align-items: center;
-    font-size:22pt;
+    font-size:clamp(1em, 3vw, 3em);
     line-height: 1.5em;
+    gap: 10%;
 }
 
 .main_product div img{
     justify-content: flex-end;
     border-radius: 50px;
     box-shadow: 4px 2px 8px rgba(0, 0, 0, .8);
+    /* min-width:400px; */
 }
 
 .main_product div{
     width:40%;
-    margin:0 5%;
 }
 
 .fountain {
@@ -290,6 +296,7 @@ body {
 
     .main_product div img{
         justify-content: center;
+        align-items: center;
     }
 
     .main_product img {
@@ -300,7 +307,9 @@ body {
 }
 
 /* TAGLINE */
-
+.tagline {
+    color:var(--dark-font-color);
+}
 .tagline h2{
     font-size:38pt;
 }
